@@ -55,6 +55,7 @@ export class ContactsService {
       email: 'ravi@gmail.com',
       address: 'No. 10, Adyar, CHennai'
     }
+    
   ];
 
   createConfirmDialog(data: ConfirmDialog): Observable<any> {
