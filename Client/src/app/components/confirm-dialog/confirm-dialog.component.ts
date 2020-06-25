@@ -15,7 +15,6 @@ export class ConfirmDialogComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    console.log(this.data);
   }
 
   closeModal(value) {

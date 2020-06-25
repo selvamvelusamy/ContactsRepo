@@ -4,13 +4,17 @@ import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../components/confirm-dialog/confirm-dialog.component';
 import { Observable } from 'rxjs';
 import { Contact } from '../interfaces/Contact';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactsService {
 
-  constructor(private dialog: MatDialog) { }
+  constructor(
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar
+    ) { }
 
   contacts: Array<Contact> = [
     {
@@ -64,5 +68,17 @@ export class ContactsService {
       width: '700px'
     })
     .afterClosed()
+  }
+
+  createSnachbar(message: string) {
+    const config = {
+      duration: 3000
+    }
+    this.snackBar.open(message, 'DISMISS', config);
+  }
+
+  deleteContact(id) {
+    this.contacts.splice(id, 1);
+    this.createSnachbar('Contact deleted successfully');
   }
 }
