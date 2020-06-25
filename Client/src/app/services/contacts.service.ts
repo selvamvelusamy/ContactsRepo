@@ -67,16 +67,16 @@ export class ContactsService {
       company: 'DRDO'
     },
     {
-      name: 'Suresh',
+      name: 'Mani',
       mobile: 9879879876,
-      email: 'suresh@gmail.com',
+      email: 'mani@gmail.com',
       address: 'No. 10, Adyar, CHennai',
       company: 'NLC'
     },
     {
-      name: 'Ravi',
+      name: 'Surya',
       mobile: 8979695949,
-      email: 'ravi@gmail.com',
+      email: 'surya@gmail.com',
       address: 'No. 10, Adyar, CHennai',
       company: 'DRDO'
     }
