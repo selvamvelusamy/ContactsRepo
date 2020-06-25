@@ -81,4 +81,12 @@ export class ContactsService {
     this.contacts.splice(id, 1);
     this.createSnachbar('Contact deleted successfully');
   }
+
+  getContactDetails(id) {
+    return this.contacts[id];
+  }
+
+  saveDetails(data, index) {
+    this.contacts.splice(index, 1, data);
+  }
 }

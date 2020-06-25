@@ -1,0 +1,22 @@
+
+.details-conatiner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .details-table {
+        padding: 40px;
+        tr {
+            td {
+                &:first-child {
+                    font-weight: bold;
+                    width: 200px;
+                }
+            }
+        }
+        .action-buttons {
+            margin: 16px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

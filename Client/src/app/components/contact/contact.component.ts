@@ -2,6 +2,7 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { ContactsService } from 'src/app/services/contacts.service';
 import { Subscription } from 'rxjs';
 import { ConfirmDialog } from 'src/app/interfaces/ConfirmDIalog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,8 @@ import { ConfirmDialog } from 'src/app/interfaces/ConfirmDIalog';
 export class ContactComponent implements OnInit, OnDestroy {
 
   constructor(
-    private contactService: ContactsService
+    private contactService: ContactsService,
+    private router: Router
   ) { }
 
   subscription: Subscription = new Subscription();
@@ -23,7 +25,8 @@ export class ContactComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
   }
 
-  onDelete() {
+  onDelete(event) {
+    event.stopPropagation();
     let data: ConfirmDialog = {
       message: 'I am going to delete the contact',
       buttons: ['Cancel', 'Delete']
@@ -35,6 +38,10 @@ export class ContactComponent implements OnInit, OnDestroy {
       }
     })
     )
+  }
+
+  onEdit() {
+    this.router.navigate(['edit',this.id]);
   }
 
   ngOnDestroy() {
