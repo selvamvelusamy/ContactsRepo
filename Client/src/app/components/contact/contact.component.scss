@@ -1,0 +1,10 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    border-radius: 4px;
+    &:hover {
+        background-color: #e0e0e0;
+    }
+}
