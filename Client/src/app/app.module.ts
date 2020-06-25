@@ -7,7 +7,6 @@ import { ContactsService } from './services/contacts.service';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
-import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from '@angular/material/icon';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
@@ -16,31 +15,46 @@ import { MatDividerModule } from "@angular/material/divider";
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { EditContactComponent } from './components/edit-contact/edit-contact.component';
+import { TableModule } from "primeng/table";
+import { InputTextModule } from "primeng/inputtext";
+import { FormsModule } from '@angular/forms';
 const materialModules = [
   MatButtonModule,
   MatIconModule,
   MatDialogModule,
   MatDividerModule,
   MatSnackBarModule
-]
+];
+
+const primengModules = [
+  TableModule,
+  InputTextModule
+];
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     ContactListComponent,
     AddContactComponent,
-    ContactDetailsComponent,
     TitleBarComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ...materialModules,
-    BrowserAnimationsModule
+    ...primengModules,
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     ContactsService
+  ],
+  entryComponents: [
+    ConfirmDialogComponent,
+    AddContactComponent
   ],
   bootstrap: [AppComponent]
 })
