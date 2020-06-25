@@ -1,0 +1,18 @@
+<div class="searchbar-container">
+    <form>
+        <mat-form-field>
+          <input type="text"
+                 placeholder="Search"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 #element
+                 >
+        </mat-form-field>
+      </form>
+      <ng-container *ngIf="showOptions">
+        <mat-list>
+            <mat-list-item *ngFor="let option of showingOptions;" (click)="onClickOption(option.email)">{{option.name}}</mat-list-item>
+        </mat-list>
+      </ng-container>
+</div>

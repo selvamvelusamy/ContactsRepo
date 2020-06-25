@@ -23,6 +23,8 @@ import { DetailsComponent } from './components/details/details.component';
 import { MatRippleModule } from "@angular/material/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { MatListModule } from "@angular/material/list";
 const materialModules = [
   MatButtonModule,
   MatIconModule,
@@ -31,7 +33,8 @@ const materialModules = [
   MatSnackBarModule,
   MatRippleModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatListModule
 ];
 
 const primengModules = [
@@ -47,7 +50,8 @@ const primengModules = [
     TitleBarComponent,
     ConfirmDialogComponent,
     EditContactComponent,
-    DetailsComponent
+    DetailsComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
