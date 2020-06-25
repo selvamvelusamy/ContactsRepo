@@ -1,6 +1,10 @@
 .title-bar-container {
   padding: 12px;
   background-color: #6220b6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
   .title-text {
     font-size: 20px;
     font-weight: bold;

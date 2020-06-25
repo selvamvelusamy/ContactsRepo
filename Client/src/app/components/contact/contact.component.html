@@ -1,6 +1,8 @@
-<div class="contact-container">
-    <div class="name">
-        <span>{{name}}</span>
+<div class="contact-container" matRipple (click)="getDetails()">
+    <div class="details">
+        <span class="name">{{name}}</span>
+        <span class="company">{{company}}</span>
+        <span class="email">{{email}}</span>
     </div>
     <div class="action-buttons">
         <button mat-button color="primary" (click)="onEdit()"><mat-icon>edit</mat-icon></button>

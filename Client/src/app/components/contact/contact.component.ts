@@ -20,6 +20,10 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   @Input() name: string;
 
+  @Input() company: string;
+
+  @Input() email: string;
+
   @Input() id: number;
 
   ngOnInit(): void {
@@ -42,6 +46,10 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   onEdit() {
     this.router.navigate(['edit',this.id]);
+  }
+
+  getDetails() {
+    this.router.navigate(['details',this.id]);
   }
 
   ngOnDestroy() {

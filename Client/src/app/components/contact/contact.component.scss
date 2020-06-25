@@ -1,10 +1,26 @@
 .contact-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 4px;
     border-radius: 4px;
+    cursor: pointer;
     &:hover {
         background-color: #e0e0e0;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 4px;
+        .name {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .company, .email {
+            color: gray;
+            font-size: 12px;
+        }
     }
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'edit/:id',
     component: EditContactComponent
+  },
+  {
+    path: 'details/:id',
+    component: DetailsComponent
   },
   {
     path: '**',

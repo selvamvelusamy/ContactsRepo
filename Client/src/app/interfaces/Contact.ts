@@ -2,5 +2,6 @@ export interface Contact {
     name: string,
     email: string,
     mobile: number,
-    address: string
+    address: string,
+    company: string,
 }

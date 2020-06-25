@@ -43,6 +43,7 @@ export class EditContactComponent implements OnInit {
   onSave() {
     this.contactService.saveDetails(this.contact, this.id);
     this.contactService.createSnachbar('Contact saved successfully');
+    this.onBack();
   }
 
 }
