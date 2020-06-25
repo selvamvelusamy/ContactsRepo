@@ -1,0 +1,10 @@
+<div class="confirm-dialog-container">
+    <div class="title">Hey are you sure!</div>
+    <mat-divider></mat-divider>
+    <div class="body">{{data.message}}</div>
+    <mat-divider></mat-divider>
+    <div class="action-buttons">
+        <button mat-button color="primary" style="margin-right: 12px" (click)="closeModal(false)">{{data.buttons[0]}}</button>
+        <button mat-raised-button color="primary" (click)="closeModal(true)">{{data.buttons[1]}}</button>
+    </div>
+</div>

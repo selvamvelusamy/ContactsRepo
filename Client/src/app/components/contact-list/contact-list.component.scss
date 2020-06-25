@@ -4,4 +4,16 @@
         display: flex;
         justify-content: flex-end;
     }
+    .contact-list {
+        display: flex;
+        justify-content: center;
+        padding: 0 16px 16px;
+        .contacts {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 16px;
+            border-radius: 4px;
+        }
+    }
 }
