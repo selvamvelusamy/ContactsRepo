@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,10 +12,15 @@ import { ContactDetailsComponent } from './components/contact-details/contact-de
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from '@angular/material/icon';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatDividerModule } from "@angular/material/divider";
 
 const materialModules = [
   MatButtonModule,
-  MatIconModule
+  MatIconModule,
+  MatDialogModule,
+  MatDividerModule
 ]
 @NgModule({
   declarations: [
@@ -23,12 +29,14 @@ const materialModules = [
     ContactListComponent,
     AddContactComponent,
     ContactDetailsComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ...materialModules
+    ...materialModules,
+    BrowserAnimationsModule
   ],
   providers: [
     ContactsService
