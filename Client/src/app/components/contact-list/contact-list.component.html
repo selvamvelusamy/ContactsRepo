@@ -7,7 +7,11 @@
   </div>
   <div class="contact-list">
     <div class="contacts">
-      <app-contact *ngFor="let contact of contactService.contacts; let i = index" [name]="contact.name"></app-contact>
+      <app-contact 
+      *ngFor="let contact of contactService.contacts; let i = index" 
+      [name]="contact.name" 
+      [id]="i"
+      ></app-contact>
     </div>
   </div>
 </div>

@@ -14,11 +14,14 @@ import { TitleBarComponent } from './components/title-bar/title-bar.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from "@angular/material/divider";
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 const materialModules = [
   MatButtonModule,
   MatIconModule,
   MatDialogModule,
-  MatDividerModule
+  MatDividerModule,
+  MatSnackBarModule
 ]
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ const materialModules = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ...materialModules
+    ...materialModules,
+    BrowserAnimationsModule
   ],
   providers: [
     ContactsService
