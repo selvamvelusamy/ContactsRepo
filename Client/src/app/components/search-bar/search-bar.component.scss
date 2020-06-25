@@ -1,0 +1,21 @@
+::ng-deep mat-list {
+    z-index: 2;
+    position: absolute;
+    top: 108px;
+    background-color: #fff;
+    box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.59);
+    border-radius: 4px;
+    min-width: 200px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+::ng-deep .searchbar-container {
+    .mat-form-field-wrapper{
+        padding: 0;
+        margin-right: 12px;
+    }
+    .mat-form-field-underline {
+        position: unset;
+    }
+}
