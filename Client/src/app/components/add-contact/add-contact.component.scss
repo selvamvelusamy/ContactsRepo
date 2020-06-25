@@ -1,0 +1,26 @@
+::ng-deep .add-contact-popup {
+    .mat-dialog-container {
+        padding: 0
+    }
+    .add-contact-container {
+        .title {
+            padding: 16px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #6220b6;
+            
+        }
+        .body {
+            min-height: 100px;
+            padding: 12px;
+            .mat-form-field {
+                width: 60%;
+            }
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+            padding: 12px;
+        }
+    }
+}

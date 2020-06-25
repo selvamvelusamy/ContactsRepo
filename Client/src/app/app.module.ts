@@ -18,13 +18,20 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 import { TableModule } from "primeng/table";
 import { InputTextModule } from "primeng/inputtext";
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetailsComponent } from './components/details/details.component';
+import { MatRippleModule } from "@angular/material/core";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 const materialModules = [
   MatButtonModule,
   MatIconModule,
   MatDialogModule,
   MatDividerModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatRippleModule,
+  MatFormFieldModule,
+  MatInputModule
 ];
 
 const primengModules = [
@@ -39,7 +46,8 @@ const primengModules = [
     AddContactComponent,
     TitleBarComponent,
     ConfirmDialogComponent,
-    EditContactComponent
+    EditContactComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +55,8 @@ const primengModules = [
     ...materialModules,
     ...primengModules,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ContactsService

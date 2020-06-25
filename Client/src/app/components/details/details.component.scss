@@ -1,0 +1,16 @@
+.details-container {
+    margin-top: 60px;
+    .detail {
+        display: flex;
+        padding: 8px;
+        .key {
+            width: 100px;
+            font-weight: bold;
+        }
+    }
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        padding: 4px;
+    }
+}

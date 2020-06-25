@@ -1,0 +1,11 @@
+<app-title-bar title="Contact Details"></app-title-bar>
+<div class="details-container">
+    <div class="detail" *ngFor="let key of keys">
+        <div class="key">{{key | titlecase}}</div>
+        <div class="value">:  {{contact[key]}}</div>
+    </div>
+    <div class="action-buttons">
+        <button mat-raised-button color="primary" (click)="goBack()" style="margin-right: 12px;">Go Back</button>
+        <button mat-raised-button color="primary" (click)="onEdit()">Edit</button>
+    </div>
+</div>

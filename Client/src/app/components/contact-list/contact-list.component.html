@@ -1,5 +1,5 @@
+<app-title-bar title="Contact List"></app-title-bar>
 <div class="contacts-list-container">
-  <app-title-bar title="Contact List"></app-title-bar>
   <div class="action-buttons">
     <button mat-raised-button color="primary" (click)="onAddContact()">
       <mat-icon>add</mat-icon><span>Add Contact</span>
@@ -10,6 +10,8 @@
       <app-contact 
       *ngFor="let contact of contactService.contacts; let i = index" 
       [name]="contact.name" 
+      [company]="contact.company" 
+      [email]="contact.email" 
       [id]="i"
       ></app-contact>
     </div>

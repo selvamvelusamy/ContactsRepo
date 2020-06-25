@@ -1,1 +1,58 @@
-<p>add-contact works!</p>
+<div class="add-contact-container">
+    <div class="title">Create Contact</div>
+    <mat-divider></mat-divider>
+    <div class="body">
+        <form [formGroup]="createContactForm" (ngSubmit)="closeModal(true)">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput 
+                type="text" 
+                formControlName="name"
+                placeholder="Enter name"
+                required>
+                <mat-error>Enter a valid name</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Mobile</mat-label>
+                <input matInput 
+                type="number" 
+                formControlName="mobile"
+                placeholder="Enter mobile number"
+                required>
+                <mat-error>Enter a valid mobile number</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label> Email</mat-label>
+                <input matInput 
+                type="email" 
+                formControlName="email"
+                placeholder="Enter  email"
+                required>
+                <mat-error>Enter a valid email</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Company</mat-label>
+                <input matInput 
+                type="text" 
+                formControlName="company"
+                placeholder="Enter Company name"
+                required>
+                <mat-error>Enter a valid company name</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput 
+                type="text" 
+                formControlName="address"
+                placeholder="Enter the address"
+                required>
+                <mat-error>Enter a valid address</mat-error>
+            </mat-form-field>
+        </form>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="action-buttons">
+        <button mat-button color="primary" style="margin-right: 12px" (click)="closeModal(false)">Cancel</button>
+        <button mat-raised-button color="primary" (click)="closeModal(true)" [disabled]="createContactForm.invalid">Save</button>
+    </div>
+</div>
