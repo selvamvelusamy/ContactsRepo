@@ -11,10 +11,14 @@ import { ContactDetailsComponent } from './components/contact-details/contact-de
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from '@angular/material/icon';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from "@angular/material/divider";
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 const materialModules = [
   MatButtonModule,
-  MatIconModule
+  MatIconModule,
+  MatDialogModule,
+  MatDividerModule
 ]
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ const materialModules = [
     ContactListComponent,
     AddContactComponent,
     ContactDetailsComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
